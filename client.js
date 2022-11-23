@@ -15,6 +15,11 @@ const connect = function () {
   conn.on('connect', () => {
     console.log('Successfully connected to the game server')
     conn.write("Name: JNX");
+
+    // setInterval(() => {
+    //   conn.write("Move: up");
+    // },50);
+
   });
   //event handler for when the server sends us data
   conn.on('data', (data) => {
