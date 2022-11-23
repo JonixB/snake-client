@@ -9,6 +9,9 @@ const setupInput = function (conn) {
   stdin.setEncoding("utf8");
   stdin.resume();
   stdin.on("data", handleUserInput);
+  setInterval(() => {
+    connection.write('Say: Wheressss ma foood');
+  }, 3000);
   return stdin;
 };
 
